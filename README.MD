@@ -14,3 +14,32 @@
 [![run on repl.it](https://img.shields.io/badge/Run_on_Replit-f26207?logo=replit&logoColor=white)](https://repl.it/github/ryzmae/webping)
 
 ---
+
+# Install 
+
+1. Install WebPing
+```sh
+npx @web-ping/cli
+```
+
+2. Go to the dir of WebPing
+```sh
+cd webping
+```
+
+3. Start & Install all dependencies
+```sh
+sh start.sh
+```
+
+**NOTE:** WebPing should be running on `http://localhost:3679` by default.
+
+---
+
+# Connect Domain to WebPing
+
+1. Go to your domain provider and add a new `A` record with the name `@` and the value `your-ip-address`.
+
+2. Go to your domain provider and add a new `CNAME` record with the name `dash` and the value `your-domain-name`.
+
+
