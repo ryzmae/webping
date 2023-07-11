@@ -10,7 +10,7 @@ const logger: any = new Logger({
     debug: true
 });
 
-class httpWebPing {
+export class httpWebPing {
     private timerId: NodeJS.Timeout | null;
     private websiteUrl: string;
     private interval: number;
@@ -61,7 +61,7 @@ class httpWebPing {
     }
 }
 
-class httpsWebPing {
+export class httpsWebPing {
     private timerId: NodeJS.Timeout | null;
     private websiteUrl: string;
     private interval: number;
