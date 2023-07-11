@@ -9,8 +9,8 @@
 
 > Pinging websites done right.
 
-[![Version](https://badgen.net/npm/v/webping)](https://www.npmjs.com/package/webping)
-[![Downloads](https://badgen.net/npm/dt/webping)](https://www.npmjs.com/package/webping)
+[![Version](https://badgen.net/npm/v/@web-ping/cli)](js.com/package/@web-ping/cli)
+[![Downloads](https://badgen.net/npm/dt/@web-pack/cli)](js.com/package/@web-ping/cli)
 [![run on repl.it](https://img.shields.io/badge/Run_on_Replit-f26207?logo=replit&logoColor=white)](https://repl.it/github/ryzmae/webping)
 
 ---
