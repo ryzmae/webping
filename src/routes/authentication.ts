@@ -78,7 +78,7 @@ router.post(
         return res.status(401).json({ message: "Invalid credentials" });
       }
 
-      const token: string = jwt.sign({ name }, secret, { expiresIn: "1h" });
+      const token: string = jwt.sign({ name }, secret, { expiresIn: "7d" });
 
       res.status(200).json({ message: "Successfully logged in!", token });
     } catch (err) {
