@@ -14,11 +14,13 @@ export class httpWebPing {
     private timerId: NodeJS.Timeout | null;
     private websiteUrl: string;
     private interval: number;
+    private id: number
 
     constructor(websiteUrl: string, interval: number) {
         this.timerId = null;
         this.websiteUrl = websiteUrl;
-        this.interval = Math.max(1, Math.min(5, interval));
+        this.interval = Math.max(1, Math.min(30, interval));
+        this.id = 0;
     }
 
     start(): void {
@@ -31,6 +33,7 @@ export class httpWebPing {
         
         this.timerId = setInterval(() => {
             this.pingWebsite();
+            this.id++;
         }, this.interval * 1000);
     }
 
@@ -39,6 +42,7 @@ export class httpWebPing {
             clearInterval(this.timerId);
             this.timerId = null;
             logger.info("WebPing stopped");
+            logger.info(`WebPing ran ${this.id} times`);
         } else {
             logger.warn("WebPing is not started");
         }
@@ -65,12 +69,13 @@ export class httpsWebPing {
     private timerId: NodeJS.Timeout | null;
     private websiteUrl: string;
     private interval: number;
+    private id: number
 
     constructor(websiteUrl: string, interval: number) {
         this.timerId = null;
         this.websiteUrl = websiteUrl;
         this.interval = Math.max(1, Math.min(5, interval));
-
+        this.id = 0;
     }
 
     start(): void {
@@ -83,7 +88,7 @@ export class httpsWebPing {
         
         this.timerId = setInterval(() => {
             this.pingWebsite();
-
+            this.id++;
         }, this.interval * 1000);
     }
 
@@ -92,7 +97,7 @@ export class httpsWebPing {
             clearInterval(this.timerId);
             this.timerId = null;
             logger.info("WebPing stopped");
-
+            logger.info(`WebPing ran ${this.id} times`);
         } else {
             logger.warn("WebPing is not started");
         }
